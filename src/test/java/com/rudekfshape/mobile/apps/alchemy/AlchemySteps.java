@@ -13,7 +13,6 @@ public class AlchemySteps {
 
     private final AndroidDriver driver;
 
-
     public static final By PLAY_BUTTON =
             By.xpath("//x2.f1/android.view.View/android.view.View/android.view.View/android.view.View[5]/android.widget.Button");
     public static final By HINT_COUNT =
@@ -24,20 +23,12 @@ public class AlchemySteps {
             By.xpath("//x2.f1/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View/android.widget.Button");
     public static final By SKIP_AD_BUTTON =
             By.xpath("//android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.ImageView");
-
-    public static final By SKIP_AD_BUTTON_TWO =
-            By.xpath("//android.widget.RelativeLayout[@content-desc=\"pageIndex: 2\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.ImageView");
-
     public static final By CLOSE_AD_BUTTON =
             By.xpath("//android.widget.RelativeLayout[contains(@content-desc,'pageIndex')]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView");
-
     public static final By CLOSE_AD_BUTTON_ID =
             By.id("com.ilyin.alchemy:id/bigo_ad_btn_close");
-
-
     public static final By CLOSE_AD_MENU_BUTTON =
             By.xpath("//android.view.View[@content-desc=\"Закрыть меню навигации\"]");
-
     public static final By AFTER_AD_SCREEN =
             By.xpath("//x2.f1/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View");
 
@@ -96,9 +87,7 @@ public class AlchemySteps {
     }
 
     private void skipAd() {
-        if (!safeClickOnce(SKIP_AD_BUTTON, "Skip ad (xpath)")) {
-            safeClickOnce(SKIP_AD_BUTTON_TWO, "Skip ad (xpath)");
-        }
+        safeClickOnce(SKIP_AD_BUTTON, "Skip ad (xpath)");
     }
 
     private boolean closeAd(){
